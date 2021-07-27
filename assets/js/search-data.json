@@ -4,9 +4,20 @@
         "post0": {
             "title": "Cat Detector",
             "content": "!pip install fastai --upgrade . Get the dataset . from fastai.vision.all import * path = untar_data(URLs.PETS)/&#39;images&#39; . Train the model and show the error rate. . def is_cat(x): return x[0].isupper() dls = ImageDataLoaders.from_name_func(path, get_image_files(path), valid_pct=0.2, seed=42, label_func=is_cat, item_tfms=Resize(224)) learn = cnn_learner(dls, resnet34, metrics=error_rate) learn.fine_tune(1) . Upload an image to detect a cat. . from google.colab import files uploaded = files.upload() . Upload widget is only available when the cell has been executed in the current browser session. Please rerun this cell to enable. Saving cat.jpg to cat (1).jpg . Display the uploaded image. . import PIL for k, v in uploaded.items(): img = PILImage.create(v) img . Run prediction. . is_cat,_, probs = learn.predict(img) print(f&#39;Is this a cat? {is_cat}&#39;) . Is this a cat? True .",
-            "url": "https://pascip.github.io/datAna-ueb/2021/07/26/_07_2021_cat_detetction.html",
-            "relUrl": "/2021/07/26/_07_2021_cat_detetction.html",
-            "date": " • Jul 26, 2021"
+            "url": "https://pascip.github.io/datAna-ueb/2021/07/20/cat-detetction.html",
+            "relUrl": "/2021/07/20/cat-detetction.html",
+            "date": " • Jul 20, 2021"
+        }
+        
+    
+  
+    
+        ,"post1": {
+            "title": "Was ich heute gelernt habe",
+            "content": "Cat Detector . Kann hier gefunden werden. . Fragen . Can we always use a random sample for a validation set? Why or why not? | Not always. For example, sometimes you just have to predict the future, so you better use the &quot;end&quot; of your data to test your results. . What is overfitting? Provide an example. | Describes a scenario where the model was trained to long and it starts including the irrelevant parts of the dataset. So the model fits too closely to the training set. . What is a metric? How does it differ from “loss”? | With the metric one tries to measure the performance of a model. This has nothimng to do wit the optimization process while the loss function is used to optimize a model. . How can pretrained models help? | The initial layers of a neural network are used for a bunch of networks. That is because they detct basic lines and that is needed for every kind of classification. Only the later layers are used identify specific classes. This reduces trianing time. . What is the “head” of a model? | One can think of the model as a head an backbone, while the backbone can be a pretrained model. And the head fine tunes it. . What kinds of features do the early layers of a CNN find? How about the later layers? | The early layers of a CNN are used for feature extraction while the later are for classification. . Are image models only useful for photos? | No . What is an “architecture”? | The function we are adjusting the weights for. It&#39;s the function of the model . What is segmentation? | __ .",
+            "url": "https://pascip.github.io/datAna-ueb/2020/07/07/lessons-learned.html",
+            "relUrl": "/2020/07/07/lessons-learned.html",
+            "date": " • Jul 7, 2020"
         }
         
     
